@@ -1,0 +1,30 @@
+[user]
+        name = Jonathan Hardy
+        email = hardyj@advisory.com
+[init]
+    templatedir = /Applications/SourceTree.app/Contents/Resources/git_local/share/git-core/templates
+[core]
+        excludesfile = /Users/hardyj/.gitignore_global
+[difftool "sourcetree"]
+        cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+        path = 
+[mergetool "sourcetree"]
+        cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+        trustExitCode = true
+[color]
+        ui = auto
+        interactive = auto
+[alias]
+        tree = log --graph --decorate --pretty=oneline --abbrev-commit
+        br = branch
+        co = checkout
+        dwc = diff -w -M --color-words
+        ll = log -p
+        rbc = rebase --continue
+        treewho = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[remote]
+        pushdefault = origin
+[push]
+        default = simple
+[credential]
+        helper = osxkeychain
